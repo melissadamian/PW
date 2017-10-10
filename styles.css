@@ -1,0 +1,27 @@
+body{
+		background-color: #FFE4C4;
+}
+h1{
+		text-align: center;
+}
+form{
+		width: 150%;
+}
+div{
+		text-indent: 50px;
+}
+input[name=message], select {
+    width: 15%;
+	height: 200px;
+}
+input[type=submit] {
+	font-weight: bold;
+    width: 10%;
+    background-color: grey;
+    color: black;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
