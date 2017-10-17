@@ -1,0 +1,8 @@
+Specificatii:
+
+-inregistrare user
+-login
+-trimitere mail
+-vizualizare carti
+-adaugare carte in cos de cumparaturi
+-cautare carte
