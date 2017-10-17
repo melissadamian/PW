@@ -5,10 +5,16 @@ h1{
 		text-align: center;
 }
 form{
-		width: 150%;
+		width: 120%;
+}
+form p{
+		margin-left: 40px;
 }
 div{
 		text-indent: 50px;
+}
+ul{
+		margin-left: 40px;
 }
 input[name=message], select {
     width: 15%;
