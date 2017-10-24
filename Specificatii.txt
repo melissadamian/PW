@@ -2,7 +2,7 @@ Specificatii:
 
 -inregistrare user
 -login
--trimitere mail
+-trimitere mesaj 
 -vizualizare carti
 -adaugare carte in cos de cumparaturi
 -cautare carte
