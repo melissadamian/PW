@@ -1,5 +1,8 @@
-<!DOCTYPE html>
+<?php
 
+?>
+
+<!DOCTYPE html>
 <html>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,7 +10,7 @@
 	<head>
 		<style type="text/css">
 		</style>
-		<link href='signup.css' rel='stylesheet' type='text/css'>
+		<link href='contact.css' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
 		<!-- Navigation -->
@@ -18,36 +21,28 @@
 			<a href="signup.php" class="w3-button w3-bar-item">Sign up</a>
 			<a href="login.php" class="w3-button w3-bar-item">Login</a>
 		</nav>
-		<!-- Description -->
-		<section class="w3-container w3-center w3-content" style="max-width:600px">
-		  <h1 class="w3-wide">Atlas Library</h1>
-		  <p class="w3-opacity"><i>Sign up!</i></p>
-		</section>
-		<form method="post" action="signupp.php">
-			<b>First name:</b><br>
+		<h1><b>Contact</b></h1>
+		<div><b>For any further details, please contact us at the following:</b></div>
+		<ul>
+			<li><i>email address:</i> <b>atlaslibrary@gmail.com</b></li>
+			<li><i>phone number:</i> <b>0256 345 213</b></li>
+		</ul>
+		<div><b>You can also send us a message here:</b></div>
+		<form action="mailto:atlaslibrary@gmail.com" method="post" enctype="text/plain">
+			<p><b>First name:</b><br>
 			<input type="text" name="firstname">
 			<br>
 			<b>Last name:</b><br>
 			<input type="text" name="lastname">
 			<br>
-			<b>Address:</b><br>
-			<input type="text" name="address">
-			<br>
 			<b>Email:</b><br>
-			<input type="email" name="email">
+			<input type="text" name="email">
 			<br>
-			<b>Username:</b><br>
-			<input type="text" name="username">
-			<br>
-			<b>Password:</b><br>
-			<input type="password" name="password">
-			<br>
-			<b>Confirm password:</b><br>
-			<input type="password" name="password2">
+			<b>Message:</b><br>
+			<input type="text" name="message">
 			<br><br>
-		    <button type="submit" name="submit">Sign up</button>
+			<input type="submit" value="Submit">
+			<input type="reset" value="Reset"></p>
 		</form>
-		<script type="text/javascript">
-		</script>
 	</body>
 </html>

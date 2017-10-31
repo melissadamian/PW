@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-
 <html>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+	
 	<head>
 		<style type="text/css">
 		</style>
-		<link href='signup.css' rel='stylesheet' type='text/css'>
+		<link href='home.css' rel='stylesheet' type='text/css'>
 	</head>
+	
 	<body>
 		<!-- Navigation -->
 		<nav class="w3-bar w3-black">
@@ -18,36 +19,39 @@
 			<a href="signup.php" class="w3-button w3-bar-item">Sign up</a>
 			<a href="login.php" class="w3-button w3-bar-item">Login</a>
 		</nav>
+		
 		<!-- Description -->
 		<section class="w3-container w3-center w3-content" style="max-width:600px">
-		  <h1 class="w3-wide">Atlas Library</h1>
-		  <p class="w3-opacity"><i>Sign up!</i></p>
+		  <h2 class="w3-wide">Atlas Library</h2>
+		  <p class="w3-opacity"><i>Order now!</i></p>
+		   <p class="w3-opacity"><i>30% SALES!</i></p>
 		</section>
-		<form method="post" action="signupp.php">
-			<b>First name:</b><br>
-			<input type="text" name="firstname">
-			<br>
-			<b>Last name:</b><br>
-			<input type="text" name="lastname">
-			<br>
-			<b>Address:</b><br>
-			<input type="text" name="address">
-			<br>
-			<b>Email:</b><br>
-			<input type="email" name="email">
-			<br>
-			<b>Username:</b><br>
-			<input type="text" name="username">
-			<br>
-			<b>Password:</b><br>
-			<input type="password" name="password">
-			<br>
-			<b>Confirm password:</b><br>
-			<input type="password" name="password2">
-			<br><br>
-		    <button type="submit" name="submit">Sign up</button>
-		</form>
+		
+		<!-- Slide Show -->
+		<section>
+		  <img class="mySlides" src="img1.jpg"
+		  style="width:100%">
+		  <img class="mySlides" src="img2.jpg"
+		  style="width:100%">
+		  <img class="mySlides" src="img3.jpg"
+		  style="width:100%">
+		</section>
+		
 		<script type="text/javascript">
+			var myIndex = 0;
+			carousel();
+			function carousel() {
+				var i;
+				var x = document.getElementsByClassName("mySlides");
+				for (i = 0; i < x.length; i++) {
+					x[i].style.display = "none";
+				}
+				myIndex++;
+				if (myIndex > x.length) {myIndex = 1}
+				x[myIndex-1].style.display = "block";
+				setTimeout(carousel, 3000);
+			}
 		</script>
+
 	</body>
 </html>

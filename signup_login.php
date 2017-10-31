@@ -12,11 +12,11 @@
 	<body>
 		<!-- Navigation -->
 		<nav class="w3-bar w3-black">
-			<a href="home.php" class="w3-button w3-bar-item">Home</a>
-			<a href="books.php" class="w3-button w3-bar-item">Books</a>
-			<a href="contact.php" class="w3-button w3-bar-item">Contact</a>
-			<a href="signup.php" class="w3-button w3-bar-item">Sign up</a>
-			<a href="login.php" class="w3-button w3-bar-item">Login</a>
+			<a href="home_login.php" class="w3-button w3-bar-item">Home</a>
+			<a href="books_login.php" class="w3-button w3-bar-item">Books</a>
+			<a href="contact_login.php" class="w3-button w3-bar-item">Contact</a>
+			<a href="signup_login.php" class="w3-button w3-bar-item">Sign up</a>
+			<a href="myprofile.php" class="w3-button w3-bar-item">My Profile</a>
 		</nav>
 		<!-- Description -->
 		<section class="w3-container w3-center w3-content" style="max-width:600px">
