@@ -5,6 +5,7 @@
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
 	
 	<head>
+		<title> Home </title>
 		<style type="text/css">
 		</style>
 		<link href='home.css' rel='stylesheet' type='text/css'>
@@ -18,6 +19,7 @@
 			<a href="contact.php" class="w3-button w3-bar-item">Contact</a>
 			<a href="signup.php" class="w3-button w3-bar-item">Sign up</a>
 			<a href="login.php" class="w3-button w3-bar-item">Login</a>
+			<a href="home_ro.php" class="w3-button w3-bar-item w3-right">RO</a>
 		</nav>
 		
 		<!-- Description -->

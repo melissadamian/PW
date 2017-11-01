@@ -39,12 +39,12 @@
 	<body>
 		<!-- Navigation -->
 		<nav class="w3-bar w3-black">
-			<a href="home.php" class="w3-button w3-bar-item">Home</a>
-			<a href="books.php" class="w3-button w3-bar-item">Books</a>
-			<a href="contact.php" class="w3-button w3-bar-item">Contact</a>
-			<a href="signup.php" class="w3-button w3-bar-item">Sign up</a>
-			<a href="login.php" class="w3-button w3-bar-item">Login</a>
-			<a href="books_ro.php" class="w3-button w3-bar-item w3-right">RO</a>
+			<a href="home_ro.php" class="w3-button w3-bar-item">Acasă</a>
+			<a href="books_ro.php" class="w3-button w3-bar-item">Cărți</a>
+			<a href="contact_ro.php" class="w3-button w3-bar-item">Contact</a>
+			<a href="signup_ro.php" class="w3-button w3-bar-item">Înregistrare</a>
+			<a href="login_ro.php" class="w3-button w3-bar-item">Intră în cont</a>
+			<a href="books.php" class="w3-button w3-bar-item w3-right">EN</a>
 		</nav>
 		<br><br>
 		<div class="container">
@@ -52,7 +52,7 @@
 					<div class="col-sm-6 col-sm-offset-3">
 						<div id="imaginary_container"> 
 							<div class="input-group stylish-input-group">
-								<input id="searchTerms" type="text" class="form-control"  placeholder="Search" >
+								<input id="searchTerms" type="text" class="form-control"  placeholder="Caută" >
 								<span class="input-group-addon">
 									<button id="submitSearch" type="submit">
 										<span class="glyphicon glyphicon-search"></span>
@@ -107,7 +107,7 @@
 								   <input type="hidden" name="hidden_title" value="<?php echo $row["title"]; ?>" />
 								   <input type="hidden" name="hidden_author" value="<?php echo $row["author"]; ?>" />								   
 								   <input type="hidden" name="hidden_price" value="<?php echo $row["price"]; ?>" />  
-								   <input type="submit" name="add_to_cart" style="margin-top:5px;" class="btn btn-success" value="Add to Cart" />  
+								   <input type="submit" name="add_to_cart" style="margin-top:5px;" class="btn btn-success" value="Adaugă în coș" />  
 							  </div>  
 						 </form>  
 					</div>  

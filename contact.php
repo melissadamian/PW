@@ -20,6 +20,7 @@
 			<a href="contact.php" class="w3-button w3-bar-item">Contact</a>
 			<a href="signup.php" class="w3-button w3-bar-item">Sign up</a>
 			<a href="login.php" class="w3-button w3-bar-item">Login</a>
+			<a href="contact_ro.php" class="w3-button w3-bar-item w3-right">RO</a>
 		</nav>
 		<h1><b>Contact</b></h1>
 		<div><b>For any further details, please contact us at the following:</b></div>

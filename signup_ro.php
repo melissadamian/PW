@@ -12,41 +12,41 @@
 	<body>
 		<!-- Navigation -->
 		<nav class="w3-bar w3-black">
-			<a href="home_login.php" class="w3-button w3-bar-item">Home</a>
-			<a href="books_login.php" class="w3-button w3-bar-item">Books</a>
-			<a href="contact_login.php" class="w3-button w3-bar-item">Contact</a>
-			<a href="signup_login.php" class="w3-button w3-bar-item">Sign up</a>
-			<a href="myprofile.php" class="w3-button w3-bar-item">My Profile</a>
-			<a href="home.php" class="w3-button w3-bar-item w3-right">RO</a>
+			<a href="home_ro.php" class="w3-button w3-bar-item">Acasă</a>
+			<a href="books_ro.php" class="w3-button w3-bar-item">Cărți</a>
+			<a href="contact_ro.php" class="w3-button w3-bar-item">Contact</a>
+			<a href="signup_ro.php" class="w3-button w3-bar-item">Înregistrare</a>
+			<a href="login_ro.php" class="w3-button w3-bar-item">Intră în cont</a>
+			<a href="signup.php" class="w3-button w3-bar-item w3-right">EN</a>
 		</nav>
 		<!-- Description -->
 		<section class="w3-container w3-center w3-content" style="max-width:600px">
-		  <h1 class="w3-wide">Atlas Library</h1>
-		  <p class="w3-opacity"><i>Sign up!</i></p>
+		  <h1 class="w3-wide">Librăria Atlas</h1>
+		  <p class="w3-opacity"><i>Înregistrează-te acum!</i></p>
 		</section>
 		<form method="post" action="signupp.php">
-			<b>First name:</b><br>
+			<b>Prenume:</b><br>
 			<input type="text" name="firstname">
 			<br>
-			<b>Last name:</b><br>
+			<b>Nume:</b><br>
 			<input type="text" name="lastname">
 			<br>
-			<b>Address:</b><br>
+			<b>Adresă:</b><br>
 			<input type="text" name="address">
 			<br>
 			<b>Email:</b><br>
 			<input type="email" name="email">
 			<br>
-			<b>Username:</b><br>
+			<b>Nume utilizator:</b><br>
 			<input type="text" name="username">
 			<br>
-			<b>Password:</b><br>
+			<b>Parolă:</b><br>
 			<input type="password" name="password">
 			<br>
-			<b>Confirm password:</b><br>
+			<b>Confirmă parola:</b><br>
 			<input type="password" name="password2">
 			<br><br>
-		    <button type="submit" name="submit">Sign up</button>
+		    <button type="submit" name="submit">Înregistrare</button>
 		</form>
 		<script type="text/javascript">
 		</script>
