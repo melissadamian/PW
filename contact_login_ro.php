@@ -13,36 +13,36 @@
 	<body>
 		<!-- Navigation -->
 		<nav class="w3-bar w3-black">
-			<a href="home_login.php" class="w3-button w3-bar-item">Home</a>
-			<a href="books_login.php" class="w3-button w3-bar-item">Books</a>
-			<a href="contact_login.php" class="w3-button w3-bar-item">Contact</a>
-			<a href="signup_login.php" class="w3-button w3-bar-item">Sign up</a>
-			<a href="myprofile.php" class="w3-button w3-bar-item">My Profile</a>
-			<a href="home.php" class="w3-button w3-bar-item w3-right">RO</a>
+			<a href="home_login_ro.php" class="w3-button w3-bar-item">Acasă</a>
+			<a href="books_login_ro.php" class="w3-button w3-bar-item">Cărți</a>
+			<a href="contact_login_ro.php" class="w3-button w3-bar-item">Contact</a>
+			<a href="signup_login_ro.php" class="w3-button w3-bar-item">Înregistrare</a>
+			<a href="myprofile_ro.php" class="w3-button w3-bar-item">Contul meu</a>
+			<a href="contact_login.php" class="w3-button w3-bar-item w3-right">EN</a>
 		</nav>
 		
 		<h1><b>Contact</b></h1>
-		<div><b>For any further details, please contact us at the following:</b></div>
+		<div><b>Pentru detalii suplimentare, ne puteți contacta la:</b></div>
 		<ul>
-			<li><i>email address:</i> <b>atlaslibrary@gmail.com</b></li>
-			<li><i>phone number:</i> <b>0256 345 213</b></li>
+			<li><i>adresa de email:</i> <b>atlaslibrary@gmail.com</b></li>
+			<li><i>numărul de telefon:</i> <b>0256 345 213</b></li>
 		</ul>
-		<div><b>You can also send us a message here:</b></div>
+		<div><b>De asemenea, ne puteți trimite un mesaj prin completarea următorului formular:</b></div>
 		<form action="mailto:atlaslibrary@gmail.com" method="post" enctype="text/plain">
-			<p><b>First name:</b><br>
+			<p><b>Prenume:</b><br>
 			<input type="text" name="firstname">
 			<br>
-			<b>Last name:</b><br>
+			<b>Nume:</b><br>
 			<input type="text" name="lastname">
 			<br>
 			<b>Email:</b><br>
 			<input type="text" name="email">
 			<br>
-			<b>Message:</b><br>
+			<b>Mesaj:</b><br>
 			<input type="text" name="message">
 			<br><br>
-			<input type="submit" value="Submit">
-			<input type="reset" value="Reset"></p>
+			<input type="submit" value="Trimitere">
+			<input type="reset" value="Resetare"></p>
 		</form>
 	</body>
 </html>

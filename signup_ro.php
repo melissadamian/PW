@@ -24,7 +24,7 @@
 		  <h1 class="w3-wide">Librăria Atlas</h1>
 		  <p class="w3-opacity"><i>Înregistrează-te acum!</i></p>
 		</section>
-		<form method="post" action="signupp.php">
+		<form method="post" action="signupp_ro.php">
 			<b>Prenume:</b><br>
 			<input type="text" name="firstname">
 			<br>

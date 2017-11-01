@@ -17,7 +17,7 @@
 			<a href="contact_login.php" class="w3-button w3-bar-item">Contact</a>
 			<a href="signup_login.php" class="w3-button w3-bar-item">Sign up</a>
 			<a href="myprofile.php" class="w3-button w3-bar-item">My Profile</a>
-			<a href="home.php" class="w3-button w3-bar-item w3-right">RO</a>
+			<a href="myprofile_ro.php" class="w3-button w3-bar-item w3-right">RO</a>
 		</nav>
 		<!-- Description -->
 		<section class="w3-container w3-center w3-content" style="max-width:600px">

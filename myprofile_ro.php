@@ -7,24 +7,24 @@
 	<head>
 		<style type="text/css">
 		</style>
-		<link href='myprofile.css' rel='stylesheet' type='text/css'>
+		<link href='myprofile_ro.css' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
 		<!-- Navigation -->
 		<nav class="w3-bar w3-black">
-			<a href="home_ro.php" class="w3-button w3-bar-item">Acasă</a>
-			<a href="books_ro.php" class="w3-button w3-bar-item">Cărți</a>
-			<a href="contact_ro.php" class="w3-button w3-bar-item">Contact</a>
-			<a href="signup_ro.php" class="w3-button w3-bar-item">Înregistrare</a>
-			<a href="login_ro.php" class="w3-button w3-bar-item">Intră în cont</a>
-			<a href="home.php" class="w3-button w3-bar-item w3-right">EN</a>
+			<a href="home_login_ro.php" class="w3-button w3-bar-item">Acasă</a>
+			<a href="books_login_ro.php" class="w3-button w3-bar-item">Cărți</a>
+			<a href="contact_login_ro.php" class="w3-button w3-bar-item">Contact</a>
+			<a href="signup_login_ro.php" class="w3-button w3-bar-item">Înregistrare</a>
+			<a href="myprofile_ro.php" class="w3-button w3-bar-item">Contul meu</a>
+			<a href="myprofile.php" class="w3-button w3-bar-item w3-right">EN</a>
 		</nav>
 		<!-- Description -->
 		<section class="w3-container w3-center w3-content" style="max-width:600px">
 		  <h1 class="w3-wide">Librăria Atlas</h1>
 		  <p class="w3-opacity"><i>Bun venit!</i></p>
 		</section>
-		<form method="post" action="myprofilee.php">
+		<form method="post" action="myprofilee_ro.php">
 			<b>Prenume:</b>
 			<input type="text" name="firstname">
 			<br><br>
@@ -42,7 +42,7 @@
 			<br><br>
 		    <button type="submit" name="submit">Salvare</button>
 		</form>
-		<h2><a href = "logout.php">Ieșire din cont</a></h2>
+		<h2><a href = "logout_ro.php">Ieșire din cont</a></h2>
 		<script type="text/javascript">
 		</script>
 	</body>

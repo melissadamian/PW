@@ -1,0 +1,61 @@
+body{
+		background-color: #FFE4B5;
+}
+
+h1{
+		text-align: center;
+		color: #B22222;
+		font-size: 50px;
+}
+
+h2{
+		text-align: center;
+		color: #B22222;
+		font-size: 40px;
+		font-style: bold;
+}
+
+p{
+		text-align: center;
+		color: #B22222;
+		font-size: 40px;
+		font-style: bold;
+}
+
+form{
+		margin-left: 100px;
+		margin-top: 30px;
+}
+
+input[name=firstname] {
+		margin-left: 20px;
+}
+
+input[name=lastname] {
+		margin-left: 45px;
+}
+
+input[name=address] {
+		margin-left: 37px;
+}
+
+input[name=email] {
+		margin-left: 48px;
+}
+
+
+input[name=password] {
+		margin-left: 40px;
+}
+
+button[type=submit] {
+	font-weight: bold;
+    width: 15%;
+    background-color: grey;
+    color: black;
+    padding: 14px 20px;
+    margin: 8px 0;
+	border: 1px solid;
+    border-radius: 4px;
+    cursor: pointer;
+}

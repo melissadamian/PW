@@ -13,18 +13,19 @@
 	<body>
 		<!-- Navigation -->
 		<nav class="w3-bar w3-black">
-			<a href="home_login.php" class="w3-button w3-bar-item">Home</a>
-			<a href="books_login.php" class="w3-button w3-bar-item">Books</a>
-			<a href="contact_login.php" class="w3-button w3-bar-item">Contact</a>
-			<a href="signup_login.php" class="w3-button w3-bar-item">Sign up</a>
-			<a href="myprofile.php" class="w3-button w3-bar-item">My Profile</a>
+			<a href="home_login_ro.php" class="w3-button w3-bar-item">Acasă</a>
+			<a href="books_login_ro.php" class="w3-button w3-bar-item">Cărți</a>
+			<a href="contact_login_ro.php" class="w3-button w3-bar-item">Contact</a>
+			<a href="signup_login_ro.php" class="w3-button w3-bar-item">Înregistrare</a>
+			<a href="myprofile_ro.php" class="w3-button w3-bar-item">Contul meu</a>
+			<a href="home_login.php" class="w3-button w3-bar-item w3-right">EN</a>
 		</nav>
 		
 		<!-- Description -->
 		<section class="w3-container w3-center w3-content" style="max-width:600px">
-		  <h2 class="w3-wide">Atlas Library</h2>
-		  <p class="w3-opacity"><i>Order now!</i></p>
-		   <p class="w3-opacity"><i>30% SALES!</i></p>
+		  <h2 class="w3-wide">Librăria Atlas</h2>
+		  <p class="w3-opacity"><i>Cumpărați acum!</i></p>
+		   <p class="w3-opacity"><i>30% reducere!</i></p>
 		</section>
 		
 		<!-- Slide Show -->
