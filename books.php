@@ -73,7 +73,7 @@
 							?>  
 							
 							<div class="col-md-4">  
-								 <form method="post" action="cart.php?action=add&id=<?php echo $row["bookID"]; ?>">  
+								 <form>  <!--Modif aici ca sa nu mai adaufe in cos dar da scriptu de serach peste cap-->
 									  <div style="border:1px solid #333; background-color:#f1f1f1; border-radius:5px; padding:16px;" align="center">  
 										   <a href="#myModal<?php echo $i?>" role="button" data-toggle="modal"> <img id="myImg" img src="<?php echo $row['photo']; ?>" class="img-responsive" /><br /></a>
 										   <a href="#myModal<?php echo $i?>" data-toggle="modal" data-target="#myModal<?php echo $i?>"><h4 class="text-info"><?php echo $row["title"]; ?></h4> </a>
@@ -84,7 +84,7 @@
 										   <input type="hidden" name="hidden_title" value="<?php echo $row["title"]; ?>" />
 										   <input type="hidden" name="hidden_author" value="<?php echo $row["author"]; ?>" />								   
 										   <input type="hidden" name="hidden_price" value="<?php echo $row["price"]; ?>" />  
-										   <input type="submit" name="add_to_cart" style="margin-top:5px;" class="btn btn-success" value="Add to Cart" />  
+										   <input id="button" type="submit" name="add_to_cart" style="margin-top:5px;" class="btn btn-success" value="Add to Cart" />  
 									  </div>  
 								 </form>
 									<div class="container">			 
@@ -120,6 +120,11 @@
                 
                
            </div>  
-		   
+		<script type="text/javascript">
+			document.getElementById('button').onclick = function() {
+			alert("Login first!");
+			window.location="login.php";
+			};
+		</script> <!--Merge doar pt prima carte, trebuie generate id-uri unice, nu merge redirectionarea-->
     </body>  
 </html>

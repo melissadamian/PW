@@ -18,6 +18,7 @@
 			<a href="contact_login.php" class="w3-button w3-bar-item">Contact</a>
 			<a href="signup_login.php" class="w3-button w3-bar-item">Sign up</a>
 			<a href="myprofile.php" class="w3-button w3-bar-item">My Profile</a>
+			<a href="shopping_cart.php" class="w3-button w3-bar-item">Shopping Cart</a>
 			<a href="home_login_ro.php" class="w3-button w3-bar-item w3-right">RO</a>
 		</nav>
 		
