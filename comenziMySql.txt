@@ -1,0 +1,46 @@
+CREATE TABLE users (
+  userID int(10) NOT NULL AUTO_INCREMENT,
+  firstname varchar(30) NOT NULL,
+  lastname varchar(30) NOT NULL,
+  address varchar(30) NOT NULL,
+  email varchar(30) NOT NULL,
+  username varchar(30) NOT NULL,
+  password varchar(30) NOT NULL,
+  PRIMARY KEY (userID)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+
+CREATE TABLE orders (
+  orderID int(10) NOT NULL AUTO_INCREMENT,
+  userID int(10) NOT NULL,
+  bookID int(10) NOT NULL,
+  UNIQUE KEY (orderID),
+  FOREIGN KEY (userID) REFERENCES users(userID),
+  FOREIGN KEY (bookID) REFERENCES books(bookID) 
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+CREATE TABLE books (
+  bookID int(10) NOT NULL AUTO_INCREMENT,
+  title varchar(30) NOT NULL,
+  author varchar(30) NOT NULL,
+  price double(10,0) NOT NULL,
+  amount int(10) NOT NULL,
+  photo varchar(60) NOT NULL,
+  PRIMARY KEY (bookID)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+INSERT INTO books (title,author,price,amount,photo) 
+values ('Inferno','Dan Brown',45,12,
+'inferno.jpg');
+
+INSERT INTO books (title,author,price,amount,photo) 
+values ('Origini','Dan Brown',55,10,
+'origin.jpg');
+
+INSERT INTO books (title,author,price,amount,photo) 
+values ('Codul lui Da Vinci','Dan Brown',43,8,
+'davinci.jpg');
+
+INSERT INTO books (title,author,price,amount,photo) 
+values ('Ingeri si Demoni','Dan Brown',38,9,
+'ingeri.jpg');

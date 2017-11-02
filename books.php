@@ -21,22 +21,6 @@
 		<link href='books.css' rel='stylesheet' type='text/css'>
 	</head>
 	
-	<style>
-
-		.stylish-input-group .input-group-addon{
-			background: white !important; 
-		}
-		.stylish-input-group .form-control{
-			border-right:0; 
-			box-shadow:0 0 0; 
-			border-color:#ccc;
-		}
-		.stylish-input-group button{
-			border:0;
-			background:transparent;
-		}
-	</style>
-	
 	<body>
 		<!-- Navigation -->
 		<nav class="w3-bar w3-black">
@@ -63,9 +47,9 @@
 						</div>
 					</div>
 				</div>
-			</div>
+		</div>
 			
-		 <br />  
+		<br />  
 		 
            <div class="container-fluid " style="width:700px;">  
                 <h3 align="center" class="text-danger"></h3><br />  

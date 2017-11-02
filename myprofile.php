@@ -1,3 +1,9 @@
+<?php   
+
+	$conn = mysqli_connect("localhost", "root", "", "library");  
+ 
+?>  
+
 <!DOCTYPE html>
 
 <html>
@@ -24,24 +30,30 @@
 		  <h1 class="w3-wide">Atlas Library</h1>
 		  <p class="w3-opacity"><i>Welcome to your profile!</i></p>
 		</section>
-		<form method="post" action="myprofilee.php">
-			<b>First name:</b>
-			<input type="text" name="firstname">
-			<br><br>
-			<b>Last name:</b>
-			<input type="text" name="lastname">
-			<br><br>
-			<b>Address:</b>
-			<input type="text" name="address">
-			<br><br>
-			<b>Email:</b>
-			<input type="email" name="email">
-			<br><br>
-			<b>Password:</b>
-			<input type="password" name="password">
-			<br><br>
-		    <button type="submit" name="submit">Save</button>
-		</form>
+		<div class="container">
+			<?php $query = "SELECT * FROM books WHERE username='melissa' "; 
+			$result = mysqli_query($conn, $query);
+			$row = mysqli_fetch_array($result);
+				?>
+				<form method="post" action="myprofilee.php">
+					<b>First name:</b>
+					<input type="text" name="firstname" value="<?php echo $row["firstname"]; ?>">
+					<br><br>
+					<b>Last name:</b>
+					<input type="text" name="lastname" value="<?php echo $row["lastname"]; ?>">
+					<br><br>
+					<b>Address:</b>
+					<input type="text" name="address" value="<?php echo $row["address"]; ?>">
+					<br><br>
+					<b>Email:</b>
+					<input type="email" name="email" value="<?php echo $row["email"]; ?>">
+					<br><br>
+					<b>Password:</b>
+					<input type="password" name="password">
+					<br><br>
+					<button type="submit" name="submit">Save</button>
+				</form>
+		</div>
 		<h2><a href = "logout.php">Sign Out</a></h2>
 		<script type="text/javascript">
 		</script>
