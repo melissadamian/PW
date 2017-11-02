@@ -15,7 +15,7 @@
 	<script src="script.js"></script>
 	
 	<head>
-		<title>Cărți</title>
+		<title> Cărți </title>
 		<style type="text/css">
 		</style>
 		<link href='books.css' rel='stylesheet' type='text/css'>
@@ -73,7 +73,7 @@
 					?>  
 					
 							<div class="col-md-4">  
-								 <form method="post" action="cart.php?action=add&id=<?php echo $row["bookID"]; ?>">  
+								 <form method="post" action="signup_ro.php">  
 									  <div style="border:1px solid #333; background-color:#f1f1f1; border-radius:5px; padding:16px;" align="center">  
 										   <a href="#myModal<?php echo $i?>" role="button" data-toggle="modal"> <img id="myImg" img src="<?php echo $row['photo']; ?>" class="img-responsive" /><br /></a>
 										   <a href="#myModal<?php echo $i?>" data-toggle="modal" data-target="#myModal<?php echo $i?>"><h4 class="text-info"><?php echo $row["title"]; ?></h4> </a>

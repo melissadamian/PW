@@ -66,7 +66,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	
 	<head>
-		<title> Shopping Cart </title>
+		<title> Coș de cumpărături </title>
 		<style type="text/css">
 		</style>
 		<link href='shopping_cart.css' rel='stylesheet' type='text/css'>
@@ -75,26 +75,26 @@
 	<body>
 		<!-- Navigation -->
 		<nav class="w3-bar w3-black">
-			<a href="home_login.php" class="w3-button w3-bar-item">Home</a>
-			<a href="books_login.php" class="w3-button w3-bar-item">Books</a>
-			<a href="contact_login.php" class="w3-button w3-bar-item">Contact</a>
-			<a href="myprofile.php" class="w3-button w3-bar-item"><span class="glyphicon glyphicon-user"></span>My Profile</a>
-			<a href="shopping_cart.php" class="w3-button w3-bar-item"><span class="glyphicon glyphicon-shopping-cart"></span>Shopping Cart</a>
-			<a href="shopping_cart_ro.php" class="w3-button w3-bar-item w3-right">RO</a>
-			<a href ="logout.php" class="w3-button w3-bar-item w3-right"><span class="glyphicon glyphicon-log-out"></span>Sign Out</a>
+			<a href="home_login_ro.php" class="w3-button w3-bar-item">Acasă</a>
+			<a href="books_login_ro.php" class="w3-button w3-bar-item">Cărți</a>
+			<a href="contact_login_ro.php" class="w3-button w3-bar-item">Contact</a>
+			<a href="myprofile_ro.php" class="w3-button w3-bar-item"><span class="glyphicon glyphicon-user"></span>Contul meu</a>
+			<a href="shopping_cart_ro.php" class="w3-button w3-bar-item"><span class="glyphicon glyphicon-shopping-cart"></span>Coș de cumpărături</a>
+			<a href="shopping_cart.php" class="w3-button w3-bar-item w3-right">EN</a>
+			<a href ="logout_ro.php" class="w3-button w3-bar-item w3-right"><span class="glyphicon glyphicon-log-out"></span>Ieșire din cont</a>
 		</nav>
 		
 		<div style="clear:both"></div>  
                 <br />  
-                <h3>Order Details</h3>  
+                <h3>Detalii comandă</h3>  
                 <div class="table-responsive">  
                      <table class="table table-bordered">  
                           <tr>  
-                               <th width="40%">Item Name</th>  
-                               <th width="10%">Quantity</th>  
-                               <th width="20%">Price</th>  
+                               <th width="40%">Carte</th>  
+                               <th width="10%">Cantitate</th>  
+                               <th width="20%">Preț</th>  
                                <th width="15%">Total</th>  
-                               <th width="5%">Action</th>  
+                               <th width="5%">Acțiune</th>  
                           </tr>  
                           <?php   
                           if(!empty($_SESSION["shopping_cart"]))  
