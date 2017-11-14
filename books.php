@@ -57,7 +57,7 @@
 				$search = isset($_GET['search'])?mysqli_real_escape_string($connect,$_GET['search']):false;
                 $query = "SELECT * FROM books";  
 				if($search){
-					$query.=" WHERE title LIKE '%$search%'"; 
+					$query.=" WHERE title LIKE '%$search%' OR author LIKE '%$search%'"; 
 				}
 				else
 					$query.=" "; 

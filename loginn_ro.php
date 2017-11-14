@@ -4,7 +4,7 @@
 	$error=''; // Variable To Store Error Message
 	if (isset($_POST['submit'])) {
 		if (empty($_POST['username']) || empty($_POST['password'])) {
-			$error = "Nume de utilizator și/sau parolă incorecte";
+			$error = "Nume de utilizator și parolă necesare";
 		}
 		else {
 			// Define $username and $password
