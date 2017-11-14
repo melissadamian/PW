@@ -1,8 +1,20 @@
-<?php   
-
-	$conn = mysqli_connect("localhost", "root", "", "library");  
- 
-?>  
+<?php
+	include('myprofilee.php'); 
+	// Establishing Connection with Server by passing server_name, user_id and password as a parameter
+	$connection = mysqli_connect("localhost", "root", "");
+	// Selecting Database
+	$db = mysqli_select_db($connection,"library");
+	// Storing Session
+	$user_check=$_SESSION['login_user'];
+	// SQL Query To Fetch Complete Information Of User
+	$ses_sql=mysqli_query($connection,"select username from users where username='$user_check'");
+	$row = mysqli_fetch_assoc($ses_sql);
+	$login_session =$row['username'];
+	if(!isset($login_session)){
+		mysql_close($connection); // Closing Connection
+		header('Location: home_login.php'); // Redirecting To Home Page
+	}
+?>
 
 <!DOCTYPE html>
 
@@ -37,11 +49,11 @@
 		  <p class="w3-opacity"><i>Welcome to your profile!</i></p>
 		</section>
 		<div class="container">
-			<?php $query = "SELECT * FROM books WHERE username='melissa' "; 
-			$result = mysqli_query($conn, $query);
-			$row = mysqli_fetch_array($result);
-				?>
-				<form method="post" action="myprofilee.php">
+			<?php $query = "SELECT * FROM users WHERE username='".$row['username']."' "; 
+				$result = mysqli_query($connection, $query);
+				$row = mysqli_fetch_array($result);
+			?>
+				<form method="post" action="">
 					<b>First name:</b>
 					<input type="text" name="firstname" value="<?php echo $row["firstname"]; ?>">
 					<br><br>
@@ -58,6 +70,7 @@
 					<input type="password" name="password">
 					<br><br>
 					<button type="submit" name="submit">Save</button>
+					<p><?php echo $success; ?></p>
 				</form>
 		</div>
 		<script type="text/javascript">

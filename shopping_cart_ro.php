@@ -16,12 +16,12 @@
                      'item_quantity'          =>     $_POST["quantity"]  
                 );  
                 $_SESSION["shopping_cart"][$count] = $item_array;
-				echo '<script>window.location="shopping_cart.php"</script>';				
+				echo '<script>window.location="shopping_cart_ro.php"</script>';				
            }  
            else  
            {  
-                echo '<script>alert("Item Already Added")</script>';  
-                echo '<script>window.location="books_login.php"</script>';  
+                echo '<script>alert("Carte adaugată deja")</script>';  
+                echo '<script>window.location="books_login_ro.php"</script>';  
            }  
       }  
       else  
@@ -44,8 +44,8 @@
                 if($values["item_id"] == $_GET["id"])  
                 {  
                      unset($_SESSION["shopping_cart"][$keys]);  
-                     echo '<script>alert("Item Removed")</script>';  
-                     echo '<script>window.location="shopping_cart.php"</script>';  
+                     echo '<script>alert("Carte ștearsă")</script>';  
+                     echo '<script>window.location="shopping_cart_ro.php"</script>';  
                 }  
            }  
       }  
@@ -108,7 +108,7 @@
                                <td><?php echo $values["item_quantity"]; ?></td>  
                                <td><?php echo $values["item_price"]; ?> lei</td>  
                                <td><?php echo number_format($values["item_quantity"] * $values["item_price"], 2); ?> lei</td>  
-                               <td><a href="shopping_cart.php?action=delete&id=<?php echo $values["item_id"]; ?>"><span class="text-danger">Remove</span></a></td>  
+                               <td><a href="shopping_cart_ro.php?action=delete&id=<?php echo $values["item_id"]; ?>"><span class="text-danger">Șterge</span></a></td>  
                           </tr>  
                           <?php  
                                     $total = $total + ($values["item_quantity"] * $values["item_price"]);  

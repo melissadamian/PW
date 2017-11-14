@@ -1,3 +1,12 @@
+<?php
+
+	include('signupp_ro.php'); 
+	if(isset($_SESSION['signup_user'])){
+		header("location: login_ro.php");
+}
+
+?>
+
 <!DOCTYPE html>
 
 <html>
@@ -25,7 +34,7 @@
 		  <h1 class="w3-wide">Librăria Atlas</h1>
 		  <p class="w3-opacity"><i>Înregistrează-te acum!</i></p>
 		</section>
-		<form method="post" action="signupp_ro.php">
+		<form method="post" action="">
 			<b>Prenume:</b><br>
 			<input type="text" name="firstname">
 			<br>
@@ -46,8 +55,10 @@
 			<br>
 			<b>Confirmă parola:</b><br>
 			<input type="password" name="password2">
-			<br><br>
+			<br>
 		    <button type="submit" name="submit">Înregistrare</button>
+			<br>
+			<span><?php echo $error; ?></span>
 		</form>
 		<script type="text/javascript">
 		</script>

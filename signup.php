@@ -1,3 +1,12 @@
+<?php
+
+	include('signupp.php'); 
+	if(isset($_SESSION['signup_user'])){
+		header("location: login.php");
+}
+
+?>
+
 <!DOCTYPE html>
 
 <html>
@@ -7,7 +16,6 @@
 	<head>
 		<title> Sign up </title>
 		<style type="text/css">
-			.background-image: url("img7.jpg");
 		</style>
 		<link href='signup.css' rel='stylesheet' type='text/css'>
 	</head>
@@ -26,7 +34,7 @@
 		  <h1 class="w3-wide">Atlas Library</h1>
 		  <p class="w3-opacity"><i>Sign up!</i></p>
 		</section>
-		<form method="post" action="signupp.php">
+		<form method="post" action="">
 			<b>First name:</b><br>
 			<input type="text" name="firstname">
 			<br>
@@ -47,8 +55,10 @@
 			<br>
 			<b>Confirm password:</b><br>
 			<input type="password" name="password2">
-			<br><br>
+			<br>
 		    <button type="submit" name="submit">Sign up</button>
+			<br>
+			<span><?php echo $error; ?></span>
 		</form>
 		<script type="text/javascript">
 		</script>

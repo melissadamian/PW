@@ -6,7 +6,8 @@ CREATE TABLE users (
   email varchar(30) NOT NULL,
   username varchar(30) NOT NULL,
   password varchar(30) NOT NULL,
-  PRIMARY KEY (userID)
+  PRIMARY KEY (userID),
+  UNIQUE KEY (username)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 
@@ -26,7 +27,8 @@ CREATE TABLE books (
   price double(10,0) NOT NULL,
   amount int(10) NOT NULL,
   photo varchar(60) NOT NULL,
-  PRIMARY KEY (bookID)
+  PRIMARY KEY (bookID),
+  UNIQUE KEY (title)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 INSERT INTO books (title,author,price,amount,photo) 

@@ -1,3 +1,21 @@
+<?php
+	include('myprofilee_ro.php'); 
+	// Establishing Connection with Server by passing server_name, user_id and password as a parameter
+	$connection = mysqli_connect("localhost", "root", "");
+	// Selecting Database
+	$db = mysqli_select_db($connection,"library");
+	// Storing Session
+	$user_check=$_SESSION['login_user'];
+	// SQL Query To Fetch Complete Information Of User
+	$ses_sql=mysqli_query($connection,"select username from users where username='$user_check'");
+	$row = mysqli_fetch_assoc($ses_sql);
+	$login_session =$row['username'];
+	if(!isset($login_session)){
+		mysql_close($connection); // Closing Connection
+		header('Location: home_login_ro.php'); // Redirecting To Home Page
+	}
+?>
+
 <!DOCTYPE html>
 
 <html>
@@ -30,24 +48,30 @@
 		  <h1 class="w3-wide">Librăria Atlas</h1>
 		  <p class="w3-opacity"><i>Bun venit!</i></p>
 		</section>
-		<form method="post" action="myprofilee_ro.php">
-			<b>Prenume:</b>
-			<input type="text" name="firstname">
-			<br><br>
-			<b>Nume:</b>
-			<input type="text" name="lastname">
-			<br><br>
-			<b>Adresă:</b>
-			<input type="text" name="address">
-			<br><br>
-			<b>Email:</b>
-			<input type="email" name="email">
-			<br><br>
-			<b>Parolă:</b>
-			<input type="password" name="password">
-			<br><br>
-		    <button type="submit" name="submit">Salvare</button>
-		</form>
+		<div class="container">
+			<?php $query = "SELECT * FROM users WHERE username='".$row['username']."' "; 
+				$result = mysqli_query($connection, $query);
+				$row = mysqli_fetch_array($result);
+			?>
+				<form method="post" action="">
+					<b>Prenume:</b>
+					<input type="text" name="firstname" value="<?php echo $row["firstname"]; ?>">
+					<br><br>
+					<b>Nume:</b>
+					<input type="text" name="lastname" value="<?php echo $row["lastname"]; ?>">
+					<br><br>
+					<b>Adresă:</b>
+					<input type="text" name="address" value="<?php echo $row["address"]; ?>">
+					<br><br>
+					<b>Email:</b>
+					<input type="email" name="email" value="<?php echo $row["email"]; ?>">
+					<br><br>
+					<b>Parolă:</b>
+					<input type="password" name="password">
+					<br><br>
+					<button type="submit" name="submit">Salvare</button>
+					<p><?php echo $success; ?></p>
+				</form>
 		<script type="text/javascript">
 		</script>
 	</body>

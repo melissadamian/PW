@@ -1,22 +1,35 @@
 <?php
 
-	define('DB_HOST', 'localhost');
-	define('DB_NAME', 'library');
-	define('DB_USER','root');
-	define('DB_PASSWORD','');
-
-	$con=mysqli_connect(DB_HOST,DB_USER,DB_PASSWORD) or die("Failed to connect to MySQL: " . mysqli_error($con));
-	$db=mysqli_select_db($con,DB_NAME) or die("Failed to connect to MySQL: " . mysqli_error($con));
-
-	$user = $_POST['username'];
-	$pass = $_POST['password'];
-		
-	$data=mysqli_query($con,"SELECT * FROM users where username = '$user' AND password = '$pass'");
-	$row=mysqli_fetch_array($data) or die(mysqli_error($con));
-	$_SESSION['username']=$row['password'];
-	if($data)
-			header("Location: myprofile_ro.php");
-	else 
-			echo "Username or password incorrect!";
-
+	session_start(); // Starting Session
+	$error=''; // Variable To Store Error Message
+	if (isset($_POST['submit'])) {
+		if (empty($_POST['username']) || empty($_POST['password'])) {
+			$error = "Nume de utilizator și/sau parolă incorecte";
+		}
+		else {
+			// Define $username and $password
+			$username=$_POST['username'];
+			$password=$_POST['password'];
+			// Establishing Connection with Server by passing server_name, user_id and password as a parameter
+			$connection = mysqli_connect("localhost", "root", "");
+			// To protect MySQL injection for Security purpose
+			$username = stripslashes($username);
+			$password = stripslashes($password);
+			$username = mysqli_real_escape_string($connection,$username);
+			$password = mysqli_real_escape_string($connection,$password);
+			// Selecting Database
+			$db = mysqli_select_db($connection,"library");
+			// SQL query to fetch information of registerd users and finds user match.
+			$query = mysqli_query($connection,"select * from users where password='$password' AND username='$username'");
+			$rows = mysqli_num_rows($query);
+			if ($rows == 1) {
+				$_SESSION['login_user']=$username; // Initializing Session
+				header("location: myprofile.php"); // Redirecting To Other Page
+			} 
+			else {
+				$error = "Nume de utilizator și/sau parolă incorecte";
+			}
+			mysqli_close($connection); // Closing Connection
+		}
+	}
 ?>

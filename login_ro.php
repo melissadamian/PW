@@ -1,3 +1,12 @@
+<?php
+
+	include('loginn_ro.php'); 
+	if(isset($_SESSION['login_user'])){
+		header("location: myprofile_ro.php");
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
 	<meta charset="UTF-8">
@@ -25,16 +34,17 @@
 		  <p class="w3-opacity"><i>Cumpărați acum!</i></p>
 		   <p class="w3-opacity"><i>30% reducere!</i></p>
 		</section>
-		<form method="post" action="loginn_ro.php">
+		<form method="post" action="">
 			<b>Nume de utilizator:</b><br>
-			<input type="text" name="username">
+			<input id="username "type="text" name="username">
 			<br>
 			<b>Parolă:</b><br>
-			<input type="password" name="password">
+			<input id="password" type="password" name="password">
 			<br><br>
 			<input type="checkbox" checked="checked"><i>Ține-mă minte!</i>
 			<br><br>
-		    <button type="submit">Intră în cont</button>
+		    <input type="submit" name="submit" value="Intră în cont"></i>
+			<p><?php echo $error; ?></p>
 		</form>
 		<script type="text/javascript">
 		</script>

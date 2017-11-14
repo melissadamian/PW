@@ -1,27 +1,34 @@
 <?php
-
-	define('DB_HOST', 'localhost');
-	define('DB_NAME', 'library');
-	define('DB_USER','root');
-	define('DB_PASSWORD','');
-
-	$con=mysqli_connect(DB_HOST,DB_USER,DB_PASSWORD) or die("Failed to connect to MySQL: " . mysqli_error($con));
-	$db=mysqli_select_db($con,DB_NAME) or die("Failed to connect to MySQL: " . mysqli_error($con));
-
-	//how to include user and pass from loginn.php
-
-	$fname = $_POST['firstname'];
-	$lname = $_POST['lastname'];
-	$addr = $_POST['address'];
-	$mail = $_POST['email'];
-	$passw = $_POST['password'];
-		
-	$data=mysqli_query($con,"SELECT * FROM users where username = '$user' AND password = '$pass'");
-	$row=mysqli_fetch_array($data) or die(mysqli_error($con));
-	$_SESSION['username']=$row['password'];
-	if($data){
-		$sql=mysql_query($con,"UPDATE users SET firstname='$fname', lastname='$lname', address='$addr', email='$mail', password='$passw' WHERE username = '$user' AND password = md5('$pass')");
-		if(!$sql) 
-				die('Could not update data: ' . mysql_error());
+	// Establishing Connection with Server by passing server_name, user_id and password as a parameter
+	$connection = mysqli_connect("localhost", "root", "");
+	// Selecting Database
+	$db = mysqli_select_db($connection,"library");
+	session_start();// Starting Session
+	$success='';
+	// Storing Session
+	$user_check=$_SESSION['login_user'];
+	// SQL Query To Fetch Complete Information Of User
+	$ses_sql=mysqli_query($connection,"select username from users where username='$user_check'");
+	$row = mysqli_fetch_assoc($ses_sql);
+	$login_session =$row['username'];
+	if(!isset($login_session)){
+		mysql_close($connection); // Closing Connection
+		header('Location: home_login_ro.php'); // Redirecting To Home Page
 	}
+	if (isset($_POST['submit'])){
+		$firstname = $_POST['firstname'];
+		$lastname = $_POST['lastname'];
+		$address =  $_POST['address'];
+		$email = $_POST['email'];
+		if(empty($_POST['password']))
+			$query = "UPDATE users SET firstname='$firstname',lastname='$lastname',address='$address',email='$email' WHERE username='".$row['username']."'";
+		else{	
+			$password = $_POST['password'];
+			$query = "UPDATE users SET firstname='$firstname',lastname='$lastname',address='$address',email='$email',password='$password' WHERE username='".$row['username']."'";
+		}
+		$data = mysqli_query ($connection,$query)or die(mysqli_error($connection));
+		if($data)
+			$success = "Profil modificat cu succes";
+	}
+
 ?>

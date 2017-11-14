@@ -1,3 +1,12 @@
+<?php
+
+	include('loginn.php'); 
+	if(isset($_SESSION['login_user'])){
+		header("location: myprofile.php");
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
 	<meta charset="UTF-8">
@@ -25,16 +34,17 @@
 		  <p class="w3-opacity"><i>Order now!</i></p>
 		  <p class="w3-opacity"><i>30% SALES!</i></p>
 		</section>
-		<form method="post" action="loginn.php">
+		<form method="post" action="">
 			<b>Username:</b><br>
-			<input type="text" name="username">
+			<input id="username "type="text" name="username">
 			<br>
 			<b>Password:</b><br>
-			<input type="password" name="password">
+			<input id="password" type="password" name="password">
 			<br><br>
 			<input type="checkbox" checked="checked"><i>Remember me</i>
 			<br><br>
-		    <button type="submit">Login</button>
+		    <input type="submit" name="submit" value="Login"></i>
+			<p><?php echo $error; ?></p>
 		</form>
 		<script type="text/javascript">
 		</script>

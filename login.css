@@ -17,10 +17,16 @@ p{
 form{
 		position: fixed;
 		margin-left: 550px;
-		margin-top: 30px;
+		margin-top: 15px;
 }
 
-button[type=submit] {
+form p{
+	color: #B22222;
+	font-size: 12px;
+	font-weight: bold;
+}	
+
+input[type=submit] {
 	font-weight: bold;
     width: 95%;
     background-color: grey;
