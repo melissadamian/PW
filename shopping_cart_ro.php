@@ -8,19 +8,34 @@
            $item_array_id = array_column($_SESSION["shopping_cart"], "item_id");  
            if(!in_array($_GET["id"], $item_array_id))  //daca pun bookID si ma loghez, adaug o carte, mai adaug una, imi zice ca e deja, ma delogheaza si cand ma reloghez e pastrata prima in cart
            {  
-                $count = count($_SESSION["shopping_cart"]);  
-                $item_array = array(  
-                     'item_id'               =>     $_GET["id"],  
-                     'item_title'               =>     $_POST["hidden_title"],  
-                     'item_price'          =>     $_POST["hidden_price"],  
-                     'item_quantity'          =>     $_POST["quantity"]  
-                );  
-                $_SESSION["shopping_cart"][$count] = $item_array;
-				echo '<script>window.location="shopping_cart_ro.php"</script>';				
+				$query = "SELECT * FROM books WHERE bookID='".$_GET["id"]."' "; 
+				$result = mysqli_query($connect, $query);
+				$row = mysqli_fetch_array($result);
+				if($row["amount"]>=$_POST["quantity"])
+				{
+					$count = count($_SESSION["shopping_cart"]);  
+					$item_array = array(  
+						 'item_id'               =>     $_GET["id"],  
+						 'item_title'               =>     $_POST["hidden_title"],  
+						 'item_price'          =>     $_POST["hidden_price"],  
+						 'item_quantity'          =>     $_POST["quantity"]  
+					);  
+					
+					$new_quantity=$row["amount"]-$_POST["quantity"];
+					$query = "UPDATE books SET amount='$new_quantity' WHERE title='".$row['title']."' ";
+					$data = mysqli_query ($connect,$query)or die(mysqli_error($connect));
+					$_SESSION["shopping_cart"][$count] = $item_array;
+					echo '<script>window.location="shopping_cart_ro.php"</script>';	
+				}
+				else
+				{
+					echo '<script>alert("Doar '.$row["amount"].' cărți rămase!")</script>';  
+					echo '<script>window.location="books_login_ro.php"</script>'; 
+				}
            }  
            else  
            {  
-                echo '<script>alert("Carte adaugată deja")</script>';  
+                echo '<script>alert("Carte deja adăugată!")</script>';  
                 echo '<script>window.location="books_login_ro.php"</script>';  
            }  
       }  
@@ -43,9 +58,15 @@
            {  
                 if($values["item_id"] == $_GET["id"])  
                 {  
-                     unset($_SESSION["shopping_cart"][$keys]);  
-                     echo '<script>alert("Carte ștearsă")</script>';  
-                     echo '<script>window.location="shopping_cart_ro.php"</script>';  
+					$query = "SELECT * FROM books WHERE bookID='".$_GET["id"]."' "; 
+					$result = mysqli_query($connect, $query);
+					$row = mysqli_fetch_array($result);
+					$new_quantity=$row["amount"]+$values["item_quantity"];
+					$query = "UPDATE books SET amount='$new_quantity' WHERE title='".$row['title']."' ";
+					$data = mysqli_query ($connect,$query)or die(mysqli_error($connect));
+                    unset($_SESSION["shopping_cart"][$keys]);  
+                    echo '<script>alert("Carte ștearsă!")</script>';  
+                    echo '<script>window.location="shopping_cart_ro.php"</script>';  
                 }  
            }  
       }  
