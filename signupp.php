@@ -3,7 +3,7 @@
 	session_start(); // Starting Session
 	$error=''; // Variable To Store Error Message
 	if (isset($_POST['submit'])) {
-		if (empty($_POST['username']) || empty($_POST['password'])) {
+		if (empty($_POST['username']) || empty($_POST['password']) || empty($_POST['password2'])) {
 			$error = "Username and Password are required";
 		}
 		else {

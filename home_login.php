@@ -36,11 +36,15 @@
 		
 		<!-- Slide Show -->
 		<section>
-		  <img class="mySlides" src="img1.jpg"
+		  <img class="mySlides" src="testamentslide.jpg"
 		  style="width:100%">
-		  <img class="mySlides" src="img2.jpg"
+		  <img class="mySlides" src="originslide3.jpg"
 		  style="width:100%">
-		  <img class="mySlides" src="img3.jpg"
+		  <img class="mySlides" src="bibliaslide.jpg"
+		  style="width:100%">
+		  <img class="mySlides" src="sarahslide.jpg"
+		  style="width:100%">
+		  <img class="mySlides" src="booksslide.jpg"
 		  style="width:100%">
 		</section>
 		
